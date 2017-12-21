@@ -18,12 +18,19 @@ public class Grocery {
 	
 	private int weight;
 	
+	private int idCount = 0;
+	
 	public Grocery (int price, int id, int weight, String name){
-		this.id = id;
+		setID(id);
 		this.name = name;
 		this.weight = weight;
 		this.price = price;
 		
+	}
+	
+	public int setID(int id) {
+		idCount++;
+		return this.id = 1000 + idCount;
 	}
 	
 	public int getPrice() {
